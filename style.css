@@ -1,0 +1,211 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Navbar */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background: #0a2540;
+    color: white;
+    position: sticky;
+    top: 0;
+    animation: slideDown 1s ease;
+  }
+  
+  @keyframes slideDown {
+    from { transform: translateY(-100%); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+  }
+  
+  .logo {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .logo span {
+    color: orange;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+  }
+  
+  .nav-links a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .nav-links a:hover {
+    color: orange;
+  }
+  
+  .menu-toggle {
+    display: none;
+    font-size: 26px;
+    cursor: pointer;
+  }
+  
+  /* Hero (AIRPLANE BACKGROUND) */
+  .hero {
+    height: 90vh;
+    background: url("https://images.unsplash.com/photo-1529070538774-1843cb3265df")
+      no-repeat center/cover;
+    color: white;
+    text-align: center;
+    padding-top: 200px;
+  }
+  
+  .hero h1 {
+    font-size: 48px;
+    animation: fadeZoom 1.5s ease;
+  }
+  
+  .hero p {
+    animation: fadeZoom 2s ease;
+  }
+  
+  @keyframes fadeZoom {
+    from { opacity: 0; transform: scale(0.8); }
+    to { opacity: 1; transform: scale(1); }
+  }
+  
+  .hero button {
+    padding: 12px 30px;
+    border: none;
+    background: orange;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .hero button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+  }
+  
+  /* Sections */
+  section {
+    padding: 60px;
+    text-align: center;
+  }
+  
+  .service-cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .service {
+    padding: 25px;
+    background: #eee;
+    width: 200px;
+  }
+   /* Sections */
+   section {
+    padding: 60px;
+    text-align: center;
+  }
+  
+  .service-cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .service {
+    padding: 25px;
+    background: #eee;
+    width: 200px;
+  }
+  .gallery-images {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+  }
+  
+  .gallery-images img {
+    width: 100%;
+    border-radius: 8px;
+  }
+  
+  /* Scroll Animation */
+  .animate {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 1s ease;
+  }
+  
+  .animate.show {
+    opacity: 1;
+    transform: translateY(0);
+  } 
+  /*galery/services animation*/
+  .gallery-images {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+  }
+  
+  .gallery-images img {
+    width: 100%;
+    border-radius: 8px;
+  }
+  
+  /* Scroll Animation */
+  .animate {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 1s ease;
+  }
+  
+  .animate.show {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  /* Footer */
+  footer {
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 15px;
+  }
+  
+  /* Mobile */
+  @media (max-width: 768px) {
+    .nav-links {
+      display: none;
+      position: absolute;
+      top: 65px;
+      right: 0;
+      background: #0a2540;
+      flex-direction: column;
+      width: 200px;
+      padding: 20px;
+    }
+  
+    .nav-links.active {
+      display: flex;
+    }
+  
+    .menu-toggle {
+      display: block;
+    }
+  
+    .gallery-images {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  
+    .service-cards {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  
